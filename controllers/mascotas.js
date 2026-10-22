@@ -7,6 +7,7 @@ class mascotasController {
     
     async create(req, res)  { //puede tener  create(req, res, next). Es un método asíncrono
         try {
+            console.log(req.body); //console.log para ver los datos que llegan al controlador
             const data = mascotasModel.create(req.body); //req.body contiene los datos enviados en la solicitud POST
             res.status(201).json(data);
             
